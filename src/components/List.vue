@@ -23,7 +23,7 @@ export default {
     };
   },
   created: function() {
-    fetch("http://localhost:8000/workingList")
+    fetch("http://192.168.0.135:8000/workingList")
       .then(res => res.json())
       .then(data => (this.workingList = data));
   }

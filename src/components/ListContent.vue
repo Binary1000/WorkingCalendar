@@ -13,7 +13,7 @@
                     <td class="my-col-8"><span class="fa fa-cny"></span>{{ item.hworktime / 8 * item.price }}</td>
                 </tr>
                 <tr class="summary" v-bind:key="index + 1000">
-                    <td><span class="fa fa-edit"></span></td>
+                    <td><span class="fa fa-edit"></span>总结</td>
                     <td class="summary-td" colspan="7">{{ item.summary }}</td>
                 </tr>
             </template>

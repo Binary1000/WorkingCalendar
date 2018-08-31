@@ -68,7 +68,7 @@ export default {
   created() {
     this.float = document.getElementById("float");
     var that = this;
-    fetch("http://localhost:8000/workingList")
+    fetch("http://192.168.0.135:8000/workingList")
       .then(res => res.json())
       .then(function(data) {
         that.data = JSON.parse(JSON.stringify(data));
