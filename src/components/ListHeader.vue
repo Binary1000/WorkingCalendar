@@ -23,6 +23,11 @@
         font-size: 18px;
     }
 
+    div.table-header {
+        background-color: rgb(183, 183, 183);
+        user-select: none;
+    }
+
     td.my-col-1{
         width: 10%;
     }
