@@ -24,9 +24,9 @@
     }
 
     div.table-header {
-        background-color: rgb(183, 183, 183);
+        background-color: rgb(194, 190, 190);
         user-select: none;
-    }
+    } 
 
     td.my-col-1{
         width: 10%;
