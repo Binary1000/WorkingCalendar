@@ -17,12 +17,12 @@ export default {
     ListContent,
     ListFooter
   },
-  data() {
+  data () {
     return {
       workingList: []
-    };
+    }
   },
-  created: function() {
+  created () {
     fetch("http://192.168.0.135:8000/workingList")
       .then(res => res.json())
       .then(data => (this.workingList = data));

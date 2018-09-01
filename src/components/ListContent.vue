@@ -2,27 +2,22 @@
     <div class="table-content">
         <table class="table table-hover table-striped">
             <template v-for="(item, index) in workingList">
-                <tr class="work-info" v-bind:key="index">
-                    <td class="my-col-1">{{ item.date }} {{ item.day}}</td>
-                    <td class="my-col-2 morning">{{ item.morning || "-"}}</td>
-                    <td class="my-col-3 afternoon">{{ item.afternoon || "-" }}</td>
-                    <td class="my-col-4 evening">{{ item.evening || "-" }}</td>
-                    <td class="my-col-5">{{ item.hworktime }}</td>
-                    <td class="my-col-6">{{ item.hworktime / 8 }}</td>
-                    <td class="my-col-7"><span class="fa fa-cny"></span>{{ item.price }}</td>
-                    <td class="my-col-8"><span class="fa fa-cny"></span>{{ item.hworktime / 8 * item.price }}</td>
-                </tr>
-                <tr class="summary" v-bind:key="index + 1000">
-                    <td><span class="fa fa-edit"></span>总结</td>
-                    <td class="summary-td" colspan="7">{{ item.summary }}</td>
-                </tr>
+                <ListWorkInfo :key="index" :item="item"></ListWorkInfo>
+                <ListSummary :key="index + 100" :item="item"></ListSummary>
             </template>
         </table>
     </div>
 </template>
 
 <script>
+import ListWorkInfo from './ListWorkInfo'
+import ListSummary from './ListSummary'
+
 export default {
+  components: {
+    ListWorkInfo,
+    ListSummary
+  },
   props: {
     workingList: {
       type: Array,
