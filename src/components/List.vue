@@ -23,15 +23,14 @@ export default {
     }
   },
   created () {
-    fetch("http://192.168.0.135:8000/workingList")
+    fetch('http://192.168.0.135:8000/workingList')
       .then(res => res.json())
-      .then(data => (this.workingList = data));
+      .then(data => (this.workingList = data))
   }
-};
+}
 </script>
 
 <style scoped>
-
 
 .fa {
   margin-right: 5px;

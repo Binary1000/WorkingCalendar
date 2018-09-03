@@ -1,12 +1,11 @@
 <template>
-	<div id="app">
-		<Header @toggle="toggle"></Header>
+  <div id="app">
+    <Header @toggle="toggle"></Header>
     <keep-alive>
       <component v-bind:is="currentComponent"></component>
     </keep-alive>
-	</div>
+  </div>
 </template>
-
 
 <script>
 import Header from './components/Header'
@@ -19,20 +18,18 @@ export default {
     List,
     Grid
   },
-  data() {
+  data () {
     return {
-      currentComponent: "List"
-    };
+      currentComponent: 'List'
+    }
   },
   methods: {
     toggle (type) {
-      this.currentComponent = type;
+      this.currentComponent = type
     }
   }
-};
+}
 </script>
-
-
 
 <style>
 html,

@@ -12,21 +12,21 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      workingList: {
-        type: Array
-      }
-    },
-    methods: {
-      mouseClickHandler (item, event) {
-        if(item.summary){
-          this.$emit("current", item);
-          this.$emit("toggle", true);
-        }
+export default {
+  props: {
+    workingList: {
+      type: Array
+    }
+  },
+  methods: {
+    mouseClickHandler (item, event) {
+      if (item.summary) {
+        this.$store.commit('setCurrent', item)
+        this.$store.commit('toggle', true)
       }
     }
   }
+}
 </script>
 
 <style scoped>

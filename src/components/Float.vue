@@ -1,6 +1,6 @@
 <template>
   <div id="float" v-show="isShow" >
-    <span id="close" @click="$emit('toggle', false)">X</span>
+    <span id="close" @click="toggle">X</span>
     <table>
       <tr>
         <td colspan="2">{{ current.date }} {{ current.day }}</td>
@@ -31,14 +31,19 @@
 
 <script>
 export default {
-  props: ['current', 'show'],
+  created () {
+  },
   computed: {
     isShow () {
-      if(this.show){
-        return true;
-      }else {
-        return false;
-      }
+      return this.$store.state.show
+    },
+    current () {
+      return this.$store.state.current
+    }
+  },
+  methods: {
+    toggle () {
+      this.$store.commit('toggle', false)
     }
   }
 }

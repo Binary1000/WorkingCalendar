@@ -24,13 +24,13 @@ export default {
       required: true
     }
   }
-};
+}
 </script>
 
 <style scoped>
 .table-content {
-	height: calc(100vh - 162px);
-	overflow: auto;
+  height: calc(100vh - 162px);
+  overflow: auto;
 }
 
 .summary {

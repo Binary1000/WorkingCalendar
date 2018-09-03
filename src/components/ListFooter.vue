@@ -21,24 +21,24 @@ export default {
     }
   },
   computed: {
-    workHours() {
-      let sum = 0;
-      let arr = this.workingList;
+    workHours () {
+      let sum = 0
+      let arr = this.workingList
       for (let i = 0; i < arr.length; ++i) {
-        sum += arr[i].hworktime;
+        sum += arr[i].hworktime
       }
-      return sum;
+      return sum
     },
-    sum() {
-      let sum = 0;
-      let arr = this.workingList;
+    sum () {
+      let sum = 0
+      let arr = this.workingList
       for (let i = 0; i < arr.length; ++i) {
-        sum += arr[i].hworktime / 8 * arr[i].price;
+        sum += arr[i].hworktime / 8 * arr[i].price
       }
-      return sum;
+      return sum
     }
   }
-};
+}
 </script>
 
 <style scoped>
