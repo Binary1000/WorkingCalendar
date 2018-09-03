@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
   #wrapper {
-    height: calc(100vh - 154px);
+    height: calc(100vh - 134px);
     overflow-y: auto;
     padding: 0 20px;
   }
