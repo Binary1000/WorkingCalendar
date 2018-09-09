@@ -19,7 +19,7 @@ export default {
     }
   },
   methods: {
-    mouseClickHandler (item, event) {
+    mouseClickHandler (item) {
       if (item.summary) {
         this.$store.commit('setCurrent', item)
         this.$store.commit('toggle', true)
